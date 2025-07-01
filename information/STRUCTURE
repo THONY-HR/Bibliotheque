@@ -1,0 +1,43 @@
+src/
+├── controller/
+│   ├── AuthController.java
+│   ├── UtilisateurController.java
+│   ├── LivreController.java
+│   ├── ExemplaireController.java
+│   ├── PretController.java
+│   ├── ReservationController.java
+│   ├── PenaliteController.java
+│   ├── AbonnementController.java
+│   └── JourFerieController.java
+├── service/
+│   ├── AuthService.java
+│   ├── UtilisateurService.java
+│   ├── LivreService.java
+│   ├── ExemplaireService.java
+│   ├── PretService.java
+│   ├── ReservationService.java
+│   ├── PenaliteService.java
+│   ├── AbonnementService.java
+│   └── JourFerieService.java
+├── model/
+│   ├── Utilisateur.java
+│   ├── Livre.java
+│   ├── Exemplaire.java
+│   ├── Pret.java
+│   ├── Reservation.java
+│   ├── Penalite.java
+│   ├── Abonnement.java
+│   └── JourFerie.java
+├── repository/
+│   ├── UtilisateurRepository.java
+│   ├── LivreRepository.java
+│   ├── ExemplaireRepository.java
+│   ├── PretRepository.java
+│   ├── ReservationRepository.java
+│   ├── PenaliteRepository.java
+│   ├── AbonnementRepository.java
+│   └── JourFerieRepository.java
+└── security/
+    ├── JwtTokenProvider.java
+    ├── JwtAuthenticationFilter.java
+    ├── WebSecurityConfig.java

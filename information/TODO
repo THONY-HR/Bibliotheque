@@ -1,0 +1,102 @@
+# 📋 To-Do List Détailée - Développement Spring Boot
+
+## 🚀 Fonctionnalités à Implémenter
+
+### 🔐 Gestion des Profils Utilisateurs
+- [ ] Création des rôles : Bibliothécaire, Adhérent (Anonyme, Étudiant, Professionnel, Professeur)
+- [ ] Authentification sécurisée (JWT ou Spring Security)
+- [ ] CRUD des utilisateurs (Bibliothécaires et Adhérents)
+- [ ] Gestion des permissions selon le rôle
+
+### 📦 Gestion des Exemplaires
+- [ ] CRUD des exemplaires de livres
+- [ ] Suivi des statuts des exemplaires (Disponible, Réservé, Prêté)
+- [ ] Gestion du type de prêt (Sur place ou à domicile)
+- [ ] Gestion du quota d’emprunt par profil
+
+### 📚 Gestion des Livres
+- [ ] CRUD des livres (titre, auteur, ISBN, etc.)
+- [ ] Association d’exemplaires aux livres
+
+### 🔄 Système de Prêt
+- [ ] Enregistrement d’un prêt
+- [ ] Suivi des dates de début et de fin de prêt
+- [ ] Gestion des retours
+- [ ] Gestion des prolongations
+- [ ] Calcul automatique des pénalités de retard
+
+### 📅 Système de Réservation
+- [ ] Réservation d’exemplaires par les adhérents
+- [ ] Validation ou annulation des réservations par les bibliothécaires
+- [ ] Notification des réservations (email ou système interne)
+
+### 🎯 Gestion des Quotas
+- [ ] Définir les quotas de prêt par type de profil
+- [ ] Vérification du respect des quotas avant validation du prêt
+
+### ⚠️ Gestion des Pénalités
+- [ ] Calcul des pénalités (retard, perte, dommages)
+- [ ] Suivi des pénalités dans le profil adhérent
+
+### 📝 Gestion des Abonnements
+- [ ] CRUD des abonnements
+- [ ] Gestion des durées (mensuel, annuel)
+- [ ] Gestion des renouvellements (automatique ou manuel)
+- [ ] Contrôle d’accès en fonction de l’abonnement actif
+
+### 📅 Gestion des Jours Fériés
+- [ ] Configuration des jours fériés
+- [ ] Ajustement automatique des dates de retour et de réservation
+
+---
+
+## 🗂️ Pages Nécessaires (Front-End et Back-End)
+
+### Front-End (Vue.js ou React)
+- [ ] Page de connexion
+- [ ] Page d’inscription adhérent
+- [ ] Tableau de bord Bibliothécaire
+- [ ] Tableau de bord Adhérent
+- [ ] Gestion des livres (Bibliothécaire)
+- [ ] Gestion des exemplaires (Bibliothécaire)
+- [ ] Gestion des prêts (Bibliothécaire et Adhérent)
+- [ ] Gestion des réservations (Bibliothécaire et Adhérent)
+- [ ] Gestion des pénalités (Bibliothécaire et Adhérent)
+- [ ] Gestion des abonnements (Bibliothécaire et Adhérent)
+- [ ] Configuration des jours fériés (Bibliothécaire)
+- [ ] Profil utilisateur (Adhérent et Bibliothécaire)
+- [ ] Historique des prêts et réservations (Adhérent)
+
+### Back-End (Spring Boot)
+
+#### 📁 Entités
+- [ ] Utilisateur (id, nom, email, mot de passe, rôle)
+- [ ] Livre (id, titre, auteur, ISBN, catégorie)
+- [ ] Exemplaire (id, statut, type de prêt, livre_id)
+- [ ] Prêt (id, utilisateur_id, exemplaire_id, date_debut, date_fin, prolongation, pénalité)
+- [ ] Réservation (id, utilisateur_id, exemplaire_id, date_reservation, statut)
+- [ ] Pénalité (id, prêt_id, montant, type)
+- [ ] Abonnement (id, utilisateur_id, type, date_debut, date_fin)
+- [ ] JourFerie (id, date, description)
+
+#### 🌐 API Rest Controllers (Endpoints)
+- [ ] `/api/auth` : Authentification (login, logout)
+- [ ] `/api/utilisateurs` : CRUD Utilisateur
+- [ ] `/api/livres` : CRUD Livre
+- [ ] `/api/exemplaires` : CRUD Exemplaire
+- [ ] `/api/prets` : Gestion des prêts
+- [ ] `/api/reservations` : Gestion des réservations
+- [ ] `/api/penalites` : Calcul et gestion des pénalités
+- [ ] `/api/abonnements` : Gestion des abonnements
+- [ ] `/api/jours-feries` : Gestion des jours fériés
+
+#### 🛠️ Services (Fonctions Métiers)
+- [ ] `AuthService` : Authentification et gestion des rôles
+- [ ] `UtilisateurService` : CRUD utilisateur, gestion des quotas
+- [ ] `LivreService` : CRUD livre
+- [ ] `ExemplaireService` : Gestion des exemplaires et statuts
+- [ ] `PretService` : Gestion des prêts et des prolongations
+- [ ] `ReservationService` : Gestion des réservations
+- [ ] `PenaliteService` : Calcul des pénalités
+- [ ] `AbonnementService` : Gestion des abonnements
+- [ ] `JourFerieService` : Gestion des jours fériés et calcul des dates ajustées
