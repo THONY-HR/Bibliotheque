@@ -1,4 +1,4 @@
-package com.bibliotheque.app.controllers;
+package com.bibliotheque.app.controller;
 
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
@@ -9,7 +9,7 @@ public class PageController {
 
     @GetMapping({"/", "/home"})
     public String home(Model model) {
-        model.addAttribute("message", "Bienvenue dans la Bibliothèque !");
+        model.addAttribute("message", "ADMINISTRATEUR");
         return "index"; // Correspond à /WEB-INF/jsp/index.jsp
     }
 }

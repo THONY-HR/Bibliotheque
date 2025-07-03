@@ -1,4 +1,4 @@
-package com.bibliotheque.app.Entity;
+package com.bibliotheque.app.entity;
 
 import jakarta.persistence.*;
 
@@ -6,8 +6,10 @@ import jakarta.persistence.*;
 @Table(name = "utilisateurs")
 public class Utilisateur {
     @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
     @Column(name = "id", nullable = false)
     private Integer id;
+
 
     @Column(name = "nom", nullable = false, length = 100)
     private String nom;
@@ -18,7 +20,7 @@ public class Utilisateur {
     @Column(name = "mot_de_passe", nullable = false)
     private String motDePasse;
 
-    @ManyToOne(fetch = FetchType.LAZY)
+    @ManyToOne(fetch = FetchType.EAGER)
     @JoinColumn(name = "role_id")
     private RoleUtilisateur role;
 
